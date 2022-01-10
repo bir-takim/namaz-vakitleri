@@ -1,8 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const got = require('got');
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom
 const request = require('request');
 const cheerio = require('cheerio');
 const vgmUrl = `https://www.sabah.com.tr/adana-namaz-vakitleri`;
@@ -27,9 +24,5 @@ router.get("/", async(req, res) => {
   res.json({ data: scrapedData })
   })
 })
-
-async function main() {
-  
-}
 
 module.exports = router;
